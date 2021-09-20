@@ -1,0 +1,45 @@
+%Defines document class
+\documentclass{article}
+
+
+
+%Draws in settings from the data files
+\input{data/preamble}
+\input{data/macros}
+\input{data/style}
+
+\addbibresource{Bibliography/bibliography.bib} %Imports bibliography file
+
+%The metadata title, names and dates of the project
+\title{{\Huge :}}
+
+\author{}
+
+%This is where the fun begins :)
+\begin{document}
+\pagenumbering{gobble}
+\input{Body/Page0}
+\tableofcontents
+\newpage
+\input{Body/Introduction}
+\newpage
+\input{Body/Analysis}
+\newpage
+\printbibliography
+\newpage
+\listoffigures
+
+
+\pagebreak
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\pagebreak
+
+
+
+\pagebreak
+
+\input{Appendix/appendix}
+
+\end{document}
